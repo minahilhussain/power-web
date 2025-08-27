@@ -8,6 +8,7 @@ const colors = {
   SubtleLavender: "#EAE9FB",
   PrimaryTint05: "#706FE505",
   Black: "#000",
+  BlackWithOpacity087: "rgba(0, 0, 0, 0.87)",
 };
 
 export default colors;

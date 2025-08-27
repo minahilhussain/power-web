@@ -1,1 +1,3 @@
-export { default as NavBar } from "./NavBar";
+export * from "./NavBar";
+export * from "./HomeSection";
+export * from "./Button";

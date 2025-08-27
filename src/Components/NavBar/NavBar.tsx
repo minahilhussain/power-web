@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
+import Link from "@mui/material/Link";
 import {
   AppBar,
   Box,
@@ -14,13 +14,7 @@ import {
   Toolbar,
 } from "@mui/material";
 import { CloseIcon, Logo, MenuIcon } from "@/assets";
-
-const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Product", href: "#product" },
-];
+import { NAV_ITEMS } from "@/Utils";
 
 export default function NavBar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -43,7 +37,7 @@ export default function NavBar() {
       </IconButton>
 
       <List sx={{ mt: 6 }}>
-        {navItems.map((item) => (
+        {NAV_ITEMS.map((item) => (
           <ListItem key={item.label} disablePadding>
             <ListItemButton
               component={Link}
@@ -61,31 +55,14 @@ export default function NavBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar
-        position="sticky"
-        sx={{
-          backgroundColor: "white",
-          color: "text.primary",
-          boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
-        }}
-      >
-        <Toolbar sx={{ maxWidth: "1100px", width: "100%", mx: "auto" }}>
+      <AppBar position="fixed">
+        <Toolbar>
           <Box sx={{ flexGrow: 1 }}>
             <Logo />
           </Box>
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 4 }}>
-            {navItems.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                style={{
-                  textDecoration: "none",
-                  color: "inherit",
-                  fontWeight: 400,
-                  fontSize: "16px",
-                  lineHeight: "28px",
-                }}
-              >
+            {NAV_ITEMS.map((item) => (
+              <Link key={item.label} href={item.href} variant="primary">
                 {item.label}
               </Link>
             ))}
@@ -105,13 +82,6 @@ export default function NavBar() {
         open={mobileOpen}
         onClose={handleDrawerToggle}
         ModalProps={{ keepMounted: true }}
-        sx={{
-          display: { xs: "block", md: "none" },
-          "& .MuiDrawer-paper": {
-            boxSizing: "border-box",
-            width: { xs: "100%", sm: 240 },
-          },
-        }}
       >
         {drawer}
       </Drawer>
