@@ -15,7 +15,14 @@ export default function HomeSection() {
           px: 4,
         }}
       >
-        <Box component="section" id="home" sx={{ mb: 10 }}>
+        <Box
+          component="section"
+          id="home"
+          sx={{
+            mb: { md: 10 },
+            mt: { xs: "150px" },
+          }}
+        >
           <Stack
             direction={{ xs: "column", md: "row" }}
             alignItems="center"

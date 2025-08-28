@@ -10,28 +10,6 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
-declare module "@mui/material/styles" {
-  interface BreakpointOverrides {
-    sm: true;
-    screen_580: true;
-    screen_654: true;
-    md: true;
-    xmd: true;
-    lmd: true;
-    lg: true;
-    xlg: true;
-    xl: true;
-    xsm: true;
-    ssm: true;
-    xxl: true;
-    "2xl": true;
-    screen_567: true;
-    screen_1380: true;
-  }
-  interface TypographyVariants extends CustomTypographyVariants {}
-  interface TypographyVariantsOptions extends Partial<CustomTypographyVariants> {}
-}
-
 const customBreakpoints = {
   values: {
     xs: 0,
@@ -53,39 +31,6 @@ const customBreakpoints = {
   },
 };
 
-interface CustomTypographyVariants {
-  displayXL: React.CSSProperties;
-  displayL: React.CSSProperties;
-  bodyM: React.CSSProperties;
-  bodyS: React.CSSProperties;
-}
-
-declare module "@mui/material/Typography" {
-  interface TypographyPropsVariantOverrides {
-    displayXL: true;
-    displayL: true;
-    bodyM: true;
-    bodyS: true;
-  }
-}
-
-declare module "@mui/material/Typography" {
-  interface TypographyPropsVariantOverrides {
-    primary: true;
-  }
-}
-
-declare module "@mui/material/Link" {
-  interface LinkPropsVariantOverrides {
-    primary: true;
-  }
-}
-declare module "@mui/material/Button" {
-  interface ButtonPropsVariantOverrides {
-    primary: true;
-  }
-}
-
 const typographyOptions: TypographyVariantsOptions = {
   fontFamily: poppins.style.fontFamily,
   displayXL: {
@@ -97,8 +42,8 @@ const typographyOptions: TypographyVariantsOptions = {
   },
   displayL: {
     fontWeight: 700,
-    fontSize: "54px",
-    lineHeight: "80px",
+    fontSize: "2rem",
+    lineHeight: "2.875rem",
     textAlign: "center" as const,
   },
   bodyM: {
@@ -117,6 +62,15 @@ const typographyOptions: TypographyVariantsOptions = {
     fontSize: "16px",
     lineHeight: "100%",
   },
+  bodyL: {
+    fontFamily: poppins.style.fontFamily,
+    fontWeight: 500,
+    color: colors.BrandNavy,
+    letterSpacing: "0.01em",
+    textAlign: "center",
+    fontSize: "1.6rem",
+    lineHeight: "1.75rem",
+  },
 };
 
 const themeOptions: ThemeOptions = {
@@ -128,6 +82,77 @@ const themeOptions: ThemeOptions = {
   },
   breakpoints: customBreakpoints,
   components: {
+    MuiTypography: {
+      styleOverrides: {
+        root: ({ ownerState, theme }) => ({
+          ...(ownerState.variant === "displayL" && {
+            [theme.breakpoints.up("md")]: {
+              fontSize: "3.375rem",
+              lineHeight: "5rem",
+              textAlign: "left",
+            },
+          }),
+        }),
+      },
+    },
+    MuiPaper: {
+      variants: [
+        {
+          props: { variant: "trustedSection" },
+          style: ({ theme }) => ({
+            background: colors.PrimaryTint05,
+            textAlign: "center",
+            paddingTop: theme.spacing(6),
+            paddingBottom: theme.spacing(10),
+            [theme.breakpoints.down("md")]: {
+              paddingTop: theme.spacing(6),
+              paddingBottom: theme.spacing(6),
+            },
+          }),
+        },
+        {
+          props: { variant: "trustedLogosContainer" },
+          style: ({ theme }) => ({
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexWrap: "wrap",
+            marginTop: "80px",
+            gap: "80px",
+            [theme.breakpoints.down("lg")]: {
+              gap: "50px",
+            },
+            [theme.breakpoints.down("sm")]: {
+              gap: "20px",
+            },
+          }),
+        },
+        {
+          props: { variant: "trustedLogo" },
+          style: ({ theme }) => ({
+            height: "36px",
+            display: "flex",
+            alignItems: "center",
+            filter: "grayscale(1) brightness(0.7)",
+            transition: "filter 0.3s",
+            background: "transparent",
+            boxShadow: "none",
+            [theme.breakpoints.down("md")]: {
+              height: "30px",
+            },
+            [theme.breakpoints.down("sm")]: {
+              height: "26px",
+            },
+            "&:hover": { filter: "none" },
+          }),
+        },
+      ],
+      styleOverrides: {
+        root: {
+          boxShadow: "none",
+        },
+      },
+    },
     MuiButton: {
       variants: [
         {
