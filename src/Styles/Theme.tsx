@@ -71,6 +71,32 @@ const typographyOptions: TypographyVariantsOptions = {
     fontSize: "1.6rem",
     lineHeight: "1.75rem",
   },
+  digitalTitle: {
+    fontWeight: 700,
+    textAlign: "center",
+    marginBottom: "16px",
+    fontSize: "2rem",
+    lineHeight: "2.5rem",
+  },
+
+  digitalSubtitle: {
+    textAlign: "center",
+    color: colors.MutedText,
+    fontSize: "1rem",
+    lineHeight: "1.5rem",
+  },
+  digitalMeta: {
+    fontSize: "0.875rem",
+    color: colors.SlateText,
+  },
+  digitalItemTitle: {
+    fontSize: "1.125rem",
+    fontWeight: 700,
+    color: colors.SlateText,
+  },
+  digitalBody: {
+    color: colors.MutedText,
+  },
 };
 
 const themeOptions: ThemeOptions = {
@@ -144,6 +170,57 @@ const themeOptions: ThemeOptions = {
               height: "26px",
             },
             "&:hover": { filter: "none" },
+          }),
+        },
+        {
+          props: { variant: "digitalSection" },
+          style: ({ theme }) => ({
+            paddingTop: "200px",
+            paddingBottom: theme.spacing(12),
+            background: "transparent",
+            boxShadow: "none",
+            [theme.breakpoints.down("md")]: {
+              paddingTop: theme.spacing(4),
+              paddingBottom: theme.spacing(4),
+            },
+          }),
+        },
+        {
+          props: { variant: "digitalGrid" },
+          style: ({ theme }) => ({
+            display: "grid",
+            gap: theme.spacing(4),
+            gridTemplateColumns: "1fr 1fr",
+            background: "transparent",
+            boxShadow: "none",
+            marginTop: "50px",
+            [theme.breakpoints.down("md")]: {
+              gridTemplateColumns: "1fr",
+            },
+            [theme.breakpoints.up("md")]: {
+              marginTop: "100px",
+            },
+          }),
+        },
+        {
+          props: { variant: "digitalRightGrid" },
+          style: ({ theme }) => ({
+            display: "grid",
+            gap: theme.spacing(2),
+            gridTemplateColumns: "1fr 1fr",
+            background: "transparent",
+            boxShadow: "none",
+            [theme.breakpoints.down("md")]: {
+              gridTemplateColumns: "1fr",
+            },
+          }),
+        },
+        {
+          props: { variant: "digitalCard" },
+          style: ({ theme }) => ({
+            background: "transparent",
+            boxShadow: "none",
+            marginBottom: theme.spacing(2),
           }),
         },
       ],

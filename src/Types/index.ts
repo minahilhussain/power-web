@@ -25,6 +25,11 @@ declare module "@mui/material/styles" {
     bodyM: CSSProperties;
     bodyS: CSSProperties;
     bodyL: CSSProperties;
+    digitalTitle: CSSProperties;
+    digitalSubtitle: CSSProperties;
+    digitalMeta: CSSProperties;
+    digitalItemTitle: CSSProperties;
+    digitalBody: CSSProperties;
   }
 
   interface TypographyVariantsOptions {
@@ -33,6 +38,11 @@ declare module "@mui/material/styles" {
     bodyM?: CSSProperties;
     bodyS?: CSSProperties;
     bodyL?: CSSProperties;
+    digitalTitle?: CSSProperties;
+    digitalSubtitle?: CSSProperties;
+    digitalMeta?: CSSProperties;
+    digitalItemTitle?: CSSProperties;
+    digitalBody?: CSSProperties;
   }
 }
 
@@ -41,6 +51,10 @@ declare module "@mui/material/Paper" {
     trustedSection: true;
     trustedLogosContainer: true;
     trustedLogo: true;
+    digitalSection: true;
+    digitalGrid: true;
+    digitalRightGrid: true;
+    digitalCard: true;
   }
 }
 
@@ -58,6 +72,11 @@ declare module "@mui/material/Typography" {
     bodyM: true;
     bodyS: true;
     bodyL: true;
+    digitalTitle: true;
+    digitalSubtitle: true;
+    digitalMeta: true;
+    digitalItemTitle: true;
+    digitalBody: true;
   }
 }
 
