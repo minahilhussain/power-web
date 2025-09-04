@@ -1,7 +1,8 @@
 import { Box, Typography, Stack } from "@mui/material";
 import Image from "next/image";
-import { homeHeader, heroImage, PlayIcon } from "@/assets";
 import { PrimaryButton } from "@/Components";
+import { heroImage, homeHeader } from "@/assets/Images";
+import { PlayIcon } from "@/assets/Icons";
 
 export default function HomeSection() {
   return (

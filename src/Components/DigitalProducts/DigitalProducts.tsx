@@ -1,8 +1,8 @@
 "use client";
 import { Box, Container, Typography, Paper } from "@mui/material";
-import { product1 } from "@/assets";
 import Image from "next/image";
 import { DIGITAL_PRODUCTS } from "@/Utils";
+import { product1 } from "@/assets/Images";
 
 export default function DigitalProductsSection() {
   return (

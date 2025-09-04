@@ -13,8 +13,8 @@ import {
   ListItemText,
   Toolbar,
 } from "@mui/material";
-import { CloseIcon, Logo, MenuIcon } from "@/assets";
 import { NAV_ITEMS } from "@/Utils";
+import { CloseIcon, Logo, MenuIcon } from "@/assets/Icons";
 
 export default function NavBar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
