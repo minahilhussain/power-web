@@ -314,7 +314,7 @@ const themeOptions: ThemeOptions = {
     },
     MuiStack: {
       styleOverrides: {
-        root: ({ ownerState, theme }) => ({
+        root: ({ theme }) => ({
           marginTop: theme.spacing(3),
           alignItems: "center",
           justifyContent: "center",
