@@ -1,5 +1,4 @@
 import { Company1, Company2, Company3, Company4, Company5 } from "@/assets/Icons";
-import { product2, product3, product4, product5 } from "../assets/Images/index";
 
 const NAV_ITEMS = [
   { label: "Home", href: "#home" },
@@ -17,10 +16,10 @@ const TRUSTED_COPMANY_LOGOS: React.ComponentType[] = [
 ];
 
 const DIGITAL_PRODUCTS = [
-  { src: product2, title: "Redesign channel website landing page" },
-  { src: product3, title: "New Locator App For a New Company" },
-  { src: product4, title: "Rental Rooms Web App Platform" },
-  { src: product5, title: "Calendar App for Big SASS Company" },
+  { src: '/product2.png', title: "Redesign channel website landing page" },
+  { src: '/product3.png', title: "New Locator App For a New Company" },
+  { src: '/product4.png', title: "Rental Rooms Web App Platform" },
+  { src: '/product5.png', title: "Calendar App for Big SASS Company" },
 ];
 
 export { NAV_ITEMS, TRUSTED_COPMANY_LOGOS, DIGITAL_PRODUCTS };

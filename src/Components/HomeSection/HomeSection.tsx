@@ -1,7 +1,6 @@
 import { Box, Typography, Stack } from "@mui/material";
 import Image from "next/image";
 import { PrimaryButton } from "@/Components";
-import { heroImage, homeHeader } from "../../assets/Images/index";
 import { PlayIcon } from "@/assets/Icons";
 
 export default function HomeSection() {
@@ -44,7 +43,7 @@ export default function HomeSection() {
                 >
                   Digital
                   <Image
-                    src={homeHeader}
+                    src={'/homeHeader.png'}
                     alt="Product"
                     width={180}
                     height={80}
@@ -94,7 +93,7 @@ export default function HomeSection() {
               minWidth={{ md: "200px" }}
             >
               <Image
-                src={heroImage}
+                src={'/heroImage.png'}
                 alt="Hero"
                 width={500}
                 height={400}
