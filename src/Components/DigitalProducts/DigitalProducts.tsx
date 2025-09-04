@@ -2,7 +2,7 @@
 import { Box, Container, Typography, Paper } from "@mui/material";
 import Image from "next/image";
 import { DIGITAL_PRODUCTS } from "@/Utils";
-import { product1 } from "@/assets/Images";
+import { product1 } from "../../assets/Images/index";
 
 export default function DigitalProductsSection() {
   return (

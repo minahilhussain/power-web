@@ -1,5 +1,5 @@
 import { Company1, Company2, Company3, Company4, Company5 } from "@/assets/Icons";
-import { product2, product3, product4, product5 } from "@/assets/Images";
+import { product2, product3, product4, product5 } from "../assets/Images/index";
 
 const NAV_ITEMS = [
   { label: "Home", href: "#home" },
