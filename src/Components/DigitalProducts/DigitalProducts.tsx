@@ -15,7 +15,7 @@ export default function DigitalProductsSection() {
           </Typography>
         </Box>
 
-        <Paper variant="digitalGrid" sx={{ mt: "100px" }}>
+        <Paper variant="digitalGrid" sx={{ mt: {xs: '2rem', xl: "4rem"} }}>
           <Box>
             <Paper variant="digitalCard">
               <Image

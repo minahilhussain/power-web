@@ -131,8 +131,7 @@ const themeOptions: ThemeOptions = {
             paddingTop: theme.spacing(6),
             paddingBottom: theme.spacing(10),
             [theme.breakpoints.down("md")]: {
-              paddingTop: theme.spacing(6),
-              paddingBottom: theme.spacing(6),
+              padding: theme.spacing(6, 2),
             },
           }),
         },
@@ -149,7 +148,8 @@ const themeOptions: ThemeOptions = {
               gap: "50px",
             },
             [theme.breakpoints.down("sm")]: {
-              gap: "20px",
+              gap: "30px",
+              marginTop: "40px",
             },
           }),
         },
@@ -175,13 +175,12 @@ const themeOptions: ThemeOptions = {
         {
           props: { variant: "digitalSection" },
           style: ({ theme }) => ({
-            paddingTop: "200px",
+            paddingTop: "100px",
             paddingBottom: theme.spacing(12),
             background: "transparent",
             boxShadow: "none",
             [theme.breakpoints.down("md")]: {
-              paddingTop: theme.spacing(4),
-              paddingBottom: theme.spacing(4),
+              padding: theme.spacing(4, 2),
             },
           }),
         },
