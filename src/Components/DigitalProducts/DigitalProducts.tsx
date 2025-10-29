@@ -5,7 +5,7 @@ import { DIGITAL_PRODUCTS } from "@/Utils";
 
 export default function DigitalProductsSection() {
   return (
-    <Paper component="section" id="product" variant="digitalSection">
+    <Paper component="section" id="product" variant="digitalSection" sx={{ mb: {xs: '2rem', xl: "4rem"} }}>
       <Container maxWidth="lg">
         <Typography variant="digitalTitle">We create world-class digital products</Typography>
         <Box>
