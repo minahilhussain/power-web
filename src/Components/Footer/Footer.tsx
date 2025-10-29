@@ -24,7 +24,7 @@ export default function Footer() {
         <Typography
           variant="body2"
           color="text.secondary"
-          sx={{ fontSize: 14, textAlign: "center" }}
+          sx={{ fontSize: 14, textAlign: "center", maxWidth: '250px', margin: 'auto' }}
         >
           © {new Date().getFullYear()} <b>Power</b>. All rights reserved.
         </Typography>
